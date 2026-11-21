@@ -132,7 +132,7 @@
                         <a href="index.html" class="${activePage === "home" ? "active" : ""}">Beranda</a>
                         <a href="destinasi.html" class="${activePage === "destinasi" ? "active" : ""}">Destinasi</a>
                         <a href="daerah.html" class="${activePage === "daerah" ? "active" : ""}">Wilayah</a>
-                        <a href="budaya.html" class="${activePage === "budaya" ? "active" : ""}">Budaya & Lifestyle</a>
+                        <a href="budaya.html" class="${activePage === "budaya" ? "active" : ""}">Budaya</a>
                         <a href="tentang.html" class="${activePage === "tentang" ? "active" : ""}">Tentang</a>
                     </nav>
 
@@ -174,7 +174,7 @@
                         <a href="index.html">Beranda</a>
                         <a href="destinasi.html">Destinasi wisata</a>
                         <a href="daerah.html">Kabupaten & kota</a>
-                        <a href="budaya.html">Budaya & lifestyle</a>
+                        <a href="budaya.html">Budaya</a>
                     </div>
                     <div class="footer-column">
                         <h4>DISCOVER</h4>

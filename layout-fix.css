@@ -1,0 +1,380 @@
+/* =========================================================
+   RANAH SUMBAR — CLEAN LAYOUT & EMPTY PHOTO SLOTS
+   Load after style.css. Main stylesheet remains untouched.
+========================================================= */
+
+/* DESTINATION CARDS: photo frame on top, content below */
+.destination-grid,
+.featured-grid,
+#destination-grid,
+#featured-grid,
+#related-grid,
+#urban-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+}
+
+.destination-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.destination-card-image {
+    position: relative;
+    display: flex;
+    flex: 0 0 250px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    overflow: hidden;
+    isolation: isolate;
+    background: #20382d;
+}
+
+.destination-card-image > img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.destination-card-image.has-photo > .photo-placeholder-content {
+    display: none;
+}
+
+.destination-card-image.image-placeholder {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(201,166,107,.16), transparent 36%),
+        linear-gradient(145deg, #263e32, #12231b 78%);
+}
+
+.destination-card-image.image-placeholder > .photo-placeholder-content {
+    position: relative;
+    z-index: 2;
+    display: flex !important;
+    width: min(86%, 260px);
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: rgba(255,255,255,.9);
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+.destination-card-image .photo-placeholder-content small {
+    color: rgba(255,255,255,.64);
+    font-size: 9px;
+}
+
+.destination-card-image::after {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.destination-card-badge,
+.destination-card-index,
+.destination-card-image .photo-credit {
+    z-index: 3;
+}
+
+.destination-card-content {
+    display: flex !important;
+    flex: 1 1 auto;
+    flex-direction: column !important;
+    min-width: 0;
+    background: #fff;
+    padding: 22px 22px 24px;
+}
+
+.destination-card-content h3 {
+    overflow-wrap: anywhere;
+}
+
+.destination-card-content p {
+    flex: 1 1 auto;
+    min-height: 65px;
+}
+
+.destination-card-bottom {
+    margin-top: auto;
+}
+
+/* FOUR CATEGORY CARDS: blank photo panel above the description */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+}
+
+.category-card {
+    position: relative;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 0 !important;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background: #14231d !important;
+    background-image: none !important;
+}
+
+.category-card::before {
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    order: 0;
+    display: block;
+    width: 100%;
+    height: 205px;
+    flex: 0 0 205px;
+    content: "";
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(201,166,107,.18), transparent 38%),
+        linear-gradient(145deg, #294337, #17271f 75%);
+}
+
+.category-card::after {
+    content: none !important;
+}
+
+.category-card > .category-photo-label {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    bottom: 190px;
+    color: rgba(255,255,255,.62);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.category-card > .category-number {
+    position: absolute;
+    z-index: 3;
+    top: 17px;
+    left: 20px;
+    color: #e0c28d;
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 23px;
+}
+
+.category-card > div {
+    position: relative;
+    z-index: 2;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 175px;
+    margin: 0 !important;
+    padding: 22px 22px 28px;
+    background: #14231d;
+}
+
+.category-card div > span {
+    color: #e0c28d;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.35px;
+}
+
+.category-card h3 {
+    margin: 11px 0 8px;
+    color: #fff;
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.2;
+}
+
+.category-card p {
+    max-width: 95%;
+    margin: 0;
+    color: rgba(255,255,255,.72);
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.category-card > .category-arrow {
+    position: absolute;
+    z-index: 3;
+    right: 19px;
+    bottom: 20px;
+    color: #e0c28d;
+}
+
+/* CULTURE FEATURE: preserve photo-shaped area, leave it empty */
+.culture-image {
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 22% 18%, rgba(201,166,107,.16), transparent 35%),
+        linear-gradient(145deg, #294337, #14231d 78%) !important;
+    background-image:
+        radial-gradient(circle at 22% 18%, rgba(201,166,107,.16), transparent 35%),
+        linear-gradient(145deg, #294337, #14231d 78%) !important;
+}
+
+.culture-image::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    content: "";
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(201,166,107,.16), transparent 36%),
+        linear-gradient(145deg, #294337, #14231d 78%);
+}
+
+.culture-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(8,18,13,.42), transparent 65%);
+}
+
+.culture-image-caption {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    z-index: 2;
+}
+
+.culture-image::after {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    z-index: 2;
+    content: "PHOTO SLOT";
+    color: rgba(255,255,255,.62);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+/* LABEL LEGIBILITY */
+.section-topline {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.45px;
+    line-height: 1.7;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+}
+
+/* HERO — no missing poster/video image request while the media folder is empty. */
+.hero-media,
+.hero-fallback {
+    background:
+        radial-gradient(circle at 76% 24%, rgba(201,166,107,.20), transparent 32%),
+        linear-gradient(120deg, #20382d, #101c16 76%) !important;
+}
+
+.hero-fallback {
+    background-image:
+        radial-gradient(circle at 76% 24%, rgba(201,166,107,.20), transparent 32%),
+        linear-gradient(120deg, #20382d, #101c16 76%) !important;
+}
+
+/* Responsive grid */
+@media (max-width: 1050px) {
+    .destination-grid,
+    .featured-grid,
+    #destination-grid,
+    #featured-grid,
+    #related-grid,
+    #urban-grid,
+    .region-grid,
+    .regions-full-grid,
+    #home-regions,
+    #all-regions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .destination-grid,
+    .featured-grid,
+    #destination-grid,
+    #featured-grid,
+    #related-grid,
+    #urban-grid,
+    .region-grid,
+    .regions-full-grid,
+    #home-regions,
+    #all-regions-grid,
+    .category-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .destination-card-image {
+        flex-basis: 230px;
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .category-card::before {
+        height: 190px;
+        flex-basis: 190px;
+    }
+
+    .category-card > .category-photo-label {
+        bottom: 175px;
+    }
+
+    .category-card > div {
+        min-height: 155px;
+    }
+
+    .culture-image {
+        min-height: 330px;
+    }
+
+    .culture-image-caption {
+        left: 22px;
+        bottom: 22px;
+    }
+
+    .culture-image::after {
+        right: 22px;
+    }
+
+    .section-topline {
+        font-size: 9px;
+        letter-spacing: 1.1px;
+    }
+}

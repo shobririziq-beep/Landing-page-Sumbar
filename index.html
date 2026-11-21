@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -7,20 +6,12 @@
     <!-- BASIC CONFIGURATION -->
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="theme-color"
-        content="#101a17"
-    >
+    <meta name="theme-color" content="#101a17">
 
-    <meta
-        name="description"
-        content="Jelajahi keindahan Sumatera Barat. Temukan wisata alam, pantai, gunung, danau, budaya, sejarah, kuliner, dan destinasi modern Ranah Minang."
-    >
+    <meta name="description"
+        content="Jelajahi keindahan Sumatera Barat. Temukan wisata alam, pantai, gunung, danau, budaya, sejarah, kuliner, dan destinasi modern Ranah Minang.">
 
     <meta name="author" content="Ranah Sumbar">
 
@@ -34,12 +25,12 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout-fix.css">
 
 </head>
 
@@ -62,30 +53,12 @@
 
                 <!-- VIDEO BACKGROUND -->
 
-                <video
-                    class="hero-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="auto"
-                    poster="assets/images/sumbar-poster.jpg"
-                    aria-label="Cinematic panorama Sumatera Barat"
-                >
-
-                    <source
-                        src="assets/video/sumbar-cinematic.mp4"
-                        type="video/mp4"
-                    >
-
-                    Browser tidak mendukung pemutaran video.
-
-                </video>
 
 
-                <!-- FALLBACK IMAGE -->
 
-                <div class="hero-fallback"></div>
+                <!-- EMPTY VISUAL BACKDROP — MEDIA CAN BE ADDED LATER -->
+
+                <div class="hero-fallback" aria-hidden="true"></div>
 
 
                 <!-- DARK OVERLAY -->
@@ -108,10 +81,7 @@
                 </h1>
 
 
-                <p
-                    class="hero-description"
-                    data-reveal="up"
-                >
+                <p class="hero-description" data-reveal="up">
 
                     Dari puncak gunung yang diselimuti kabut,
                     danau yang menenangkan, hingga warisan budaya
@@ -122,15 +92,9 @@
                 </p>
 
 
-                <div
-                    class="hero-actions"
-                    data-reveal="scale"
-                >
+                <div class="hero-actions" data-reveal="scale">
 
-                    <a
-                        href="destinasi.html"
-                        class="btn btn-primary magnetic"
-                    >
+                    <a href="destinasi.html" class="btn btn-primary magnetic">
 
                         Jelajahi Destinasi
 
@@ -139,21 +103,13 @@
                     </a>
 
 
-                    <a
-                        href="#discover"
-                        class="hero-link"
-                    >
-
-
-
+                    <a href="#discover" class="hero-link">
+                        <span>Scroll to discover ↓</span>
                     </a>
 
                 </div>
 
             </div>
-
-
-            <!-- HERO BOTTOM INFORMATION -->
 
         </section>
 
@@ -163,15 +119,9 @@
              INTRODUCTION
         ================================================== -->
 
-        <section
-            class="intro-section section-padding"
-            id="discover"
-        >
+        <section class="intro-section section-padding" id="discover">
 
-            <div
-                class="section-topline"
-                data-reveal="left"
-            >
+            <div class="section-topline" data-reveal="left">
 
                 <span>
                     01 — THE LAND OF MINANGKABAU
@@ -187,10 +137,7 @@
             <div class="intro-grid">
 
 
-                <div
-                    class="intro-heading"
-                    data-reveal="up"
-                >
+                <div class="intro-heading" data-reveal="up">
 
                     <p class="eyebrow">
 
@@ -211,10 +158,7 @@
 
 
 
-                <div
-                    class="intro-copy"
-                    data-reveal="blur"
-                >
+                <div class="intro-copy" data-reveal="blur">
 
                     <p>
 
@@ -234,10 +178,7 @@
                     </p>
 
 
-                    <a
-                        href="tentang.html"
-                        class="text-link"
-                    >
+                    <a href="tentang.html" class="text-link">
 
                         Cerita tentang Ranah Minang
 
@@ -253,10 +194,7 @@
 
             <!-- STATISTICS -->
 
-            <div
-                class="intro-stats"
-                data-reveal="scale"
-            >
+            <div class="intro-stats" data-reveal="scale">
 
                 <div class="stat-item">
 
@@ -298,10 +236,7 @@
 
         <section class="featured-section section-padding">
 
-            <div
-                class="section-heading"
-                data-reveal="up"
-            >
+            <div class="section-heading" data-reveal="up">
 
                 <div>
 
@@ -321,10 +256,7 @@
                 </div>
 
 
-                <a
-                    href="destinasi.html"
-                    class="text-link"
-                >
+                <a href="destinasi.html" class="text-link">
 
                     Semua destinasi
 
@@ -337,10 +269,7 @@
 
             <!-- AUTOMATIC DESTINATION CARDS -->
 
-            <div
-                class="destination-grid featured-grid"
-                id="featured-grid"
-            >
+            <div class="destination-grid featured-grid" id="featured-grid">
 
                 <!-- Data dari data.js -->
 
@@ -352,14 +281,12 @@
 
         <!-- =================================================
              DESTINATION CATEGORIES
+             FIVE VISUAL AREAS FIXED WITH REAL SUMBAR PHOTOS
         ================================================== -->
 
         <section class="category-section section-padding">
 
-            <div
-                class="section-heading"
-                data-reveal="up"
-            >
+            <div class="section-heading" data-reveal="up">
 
                 <div>
 
@@ -385,14 +312,11 @@
             <div class="category-grid">
 
 
-                <!-- BEACH -->
+                <!-- 01. PANTAI & LAUT — FOTO AKAN DIISI KEMUDIAN -->
 
-                <a
-                    href="destinasi.html?kategori=Pantai"
-                    class="category-card category-sea"
-                    data-reveal="left"
-                >
+                <a href="destinasi.html?kategori=Pantai" class="category-card category-sea" data-reveal="left">
 
+                    <span class="category-photo-label" aria-hidden="true">PHOTO SLOT</span>
                     <span class="category-number">
 
                         01
@@ -423,14 +347,11 @@
 
 
 
-                <!-- MOUNTAIN -->
+                <!-- 02. GUNUNG & ALAM — FOTO AKAN DIISI KEMUDIAN -->
 
-                <a
-                    href="destinasi.html?kategori=Gunung"
-                    class="category-card category-mountain"
-                    data-reveal="up"
-                >
+                <a href="destinasi.html?kategori=Gunung" class="category-card category-mountain" data-reveal="up">
 
+                    <span class="category-photo-label" aria-hidden="true">PHOTO SLOT</span>
                     <span class="category-number">
 
                         02
@@ -461,14 +382,11 @@
 
 
 
-                <!-- LAKE -->
+                <!-- 03. DANAU & PERAIRAN — FOTO AKAN DIISI KEMUDIAN -->
 
-                <a
-                    href="destinasi.html?kategori=Danau"
-                    class="category-card category-lake"
-                    data-reveal="right"
-                >
+                <a href="destinasi.html?kategori=Danau" class="category-card category-lake" data-reveal="right">
 
+                    <span class="category-photo-label" aria-hidden="true">PHOTO SLOT</span>
                     <span class="category-number">
 
                         03
@@ -499,14 +417,11 @@
 
 
 
-                <!-- CULTURE -->
+                <!-- 04. BUDAYA & SEJARAH — FOTO AKAN DIISI KEMUDIAN -->
 
-                <a
-                    href="destinasi.html?kategori=Budaya"
-                    class="category-card category-culture"
-                    data-reveal="left"
-                >
+                <a href="destinasi.html?kategori=Budaya" class="category-card category-culture" data-reveal="left">
 
+                    <span class="category-photo-label" aria-hidden="true">PHOTO SLOT</span>
                     <span class="category-number">
 
                         04
@@ -549,10 +464,7 @@
         <section class="regions-section section-padding">
 
 
-            <div
-                class="section-heading"
-                data-reveal="up"
-            >
+            <div class="section-heading" data-reveal="up">
 
                 <div>
 
@@ -572,10 +484,7 @@
                 </div>
 
 
-                <a
-                    href="daerah.html"
-                    class="text-link"
-                >
+                <a href="daerah.html" class="text-link">
 
                     Jelajahi seluruh daerah
 
@@ -589,10 +498,7 @@
 
             <!-- AUTOMATIC REGION CARDS -->
 
-            <div
-                class="region-grid"
-                id="home-regions"
-            >
+            <div class="region-grid" id="home-regions">
 
                 <!-- Data wilayah dari data.js -->
 
@@ -604,15 +510,14 @@
 
         <!-- =================================================
              CULTURE FEATURE
+             PHOTO SLOT — USER WILL ADD IMAGE LATER
         ================================================== -->
 
         <section class="culture-feature section-padding">
 
 
-            <div
-                class="culture-image"
-                data-reveal="left"
-            >
+            <div class="culture-image" data-reveal="left" role="img"
+                aria-label="Rumah Gadang, rumah adat masyarakat Minangkabau">
 
                 <div class="culture-image-overlay"></div>
 
@@ -634,10 +539,7 @@
 
 
 
-            <div
-                class="culture-content"
-                data-reveal="right"
-            >
+            <div class="culture-content" data-reveal="right">
 
                 <p class="eyebrow">
 
@@ -664,10 +566,7 @@
                 </p>
 
 
-                <a
-                    href="budaya.html"
-                    class="btn btn-outline"
-                >
+                <a href="budaya.html" class="btn btn-outline">
 
                     Jelajahi Ragam Sumbar
 
@@ -685,10 +584,7 @@
              FINAL CTA
         ================================================== -->
 
-        <section
-            class="final-cta section-padding"
-            data-reveal="blur"
-        >
+        <section class="final-cta section-padding" data-reveal="blur">
 
             <p class="eyebrow">
 
@@ -714,10 +610,7 @@
             </p>
 
 
-            <a
-                href="destinasi.html"
-                class="btn btn-primary"
-            >
+            <a href="destinasi.html" class="btn btn-primary">
 
                 Mulai Penjelajahan
 
@@ -740,14 +633,14 @@
     <!-- =================================================
          JAVASCRIPT
 
-         PENTING:
-         data.js HARUS DIPANGGIL SEBELUM script.js.
+         Urutan wajib:
+         1. data.js
+         2. script.js
     ================================================== -->
 
     <script src="data.js"></script>
-
+    <script src="photos.js"></script>
     <script src="script.js"></script>
-
 
 </body>
 
